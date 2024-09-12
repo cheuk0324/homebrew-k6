@@ -1,4 +1,4 @@
-class K6 < Formula
+class K6V39 < Formula
 	desc "A modern load testing tool for developers and testers"
 	homepage "https://k6.io/"
 	url "https://github.com/cheuk0324/k6/archive/refs/tags/v0.39.0.tar.gz"
@@ -7,9 +7,9 @@ class K6 < Formula
 	depends_on "go" => :build
 	def install
 	  system "make"
-	  bin.install "k6"
+	  bin.install "k6" => "k6-v39"
 	end
 	test do
-	  system "#{bin}/k6", "--version"
+	  system "#{bin}/k6-v39", "--version"
 	end
   end
